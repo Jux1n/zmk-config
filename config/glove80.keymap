@@ -26,7 +26,11 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
-
+        rgb_ug_press: behavior_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_RED>, <&wait_ms 100>, <&rgb_ug RGB_CYAN>;
+        };
     };
 
     macros {
@@ -75,23 +79,14 @@
             // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
-bindings = <
-    &kp F1       &rgb_ug_press RGB_RED      &kp F2       &rgb_ug_press RGB_GREEN   &kp F3       &rgb_ug_press RGB_BLUE    &kp F4       &rgb_ug_press RGB_YELLOW   &kp F5
-    &kp EQUAL    &rgb_ug_press RGB_ORANGE   &kp N1       &rgb_ug_press RGB_PURPLE   &kp N2       &rgb_ug_press RGB_CYAN    &kp N3       &rgb_ug_press RGB_WHITE
-    &kp TAB      &rgb_ug_press RGB_MAGENTA  &kp Q        &rgb_ug_press RGB_RED      &kp W        &rgb_ug_press RGB_GREEN   &kp E        &rgb_ug_press RGB_BLUE
-    &kp ESC      &rgb_ug_press RGB_YELLOW   &kp A        &rgb_ug_press RGB_RED      &kp S        &rgb_ug_press RGB_GREEN   &kp D        &rgb_ug_press RGB_BLUE
-    &kp F        &rgb_ug_press RGB_YELLOW   &kp G        &rgb_ug_press RGB_PURPLE   &kp H        &rgb_ug_press RGB_CYAN    &kp J        &rgb_ug_press RGB_WHITE
-    &kp K        &rgb_ug_press RGB_RED      &kp L        &rgb_ug_press RGB_GREEN   &kp SEMI     &rgb_ug_press RGB_BLUE    &kp SQT      &rgb_ug_press RGB_YELLOW
-    &kp GRAVE    &rgb_ug_press RGB_RED      &kp Z        &rgb_ug_press RGB_GREEN   &kp X        &rgb_ug_press RGB_BLUE    &kp C        &rgb_ug_press RGB_YELLOW
-    &kp V        &rgb_ug_press RGB_PURPLE   &kp B        &rgb_ug_press RGB_CYAN    &kp LSHFT    &rgb_ug_press RGB_WHITE   &kp LCTRL    &rgb_ug_press RGB_RED
-    &layer_td    &rgb_ug_press RGB_GREEN    &kp LGUI     &rgb_ug_press RGB_BLUE    &kp RCTRL    &rgb_ug_press RGB_YELLOW  &kp RSHFT    &rgb_ug_press RGB_PURPLE
-    &kp N        &rgb_ug_press RGB_CYAN     &kp M        &rgb_ug_press RGB_WHITE   &kp COMMA    &rgb_ug_press RGB_RED     &kp DOT      &rgb_ug_press RGB_GREEN
-    &kp FSLH     &rgb_ug_press RGB_BLUE     &kp PG_UP    &rgb_ug_press RGB_YELLOW  &mo MAGIC    &rgb_ug_press RGB_PURPLE  &kp HOME    &rgb_ug_press RGB_CYAN
-    &kp END      &rgb_ug_press RGB_WHITE    &kp LEFT     &rgb_ug_press RGB_RED     &kp RIGHT    &rgb_ug_press RGB_GREEN   &kp BSPC    &rgb_ug_press RGB_BLUE
-    &kp DEL      &rgb_ug_press RGB_YELLOW   &kp LALT     &rgb_ug_press RGB_PURPLE  &kp RALT     &rgb_ug_press RGB_CYAN    &kp RET     &rgb_ug_press RGB_WHITE
-    &kp SPACE    &rgb_ug_press RGB_RED      &kp UP       &rgb_ug_press RGB_GREEN   &kp DOWN     &rgb_ug_press RGB_BLUE    &kp LBKT    &rgb_ug_press RGB_YELLOW
-    &kp RBKT     &rgb_ug_press RGB_PURPLE   &kp PG_DN    &rgb_ug_press RGB_CYAN
->;
+            bindings = <
+            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                         &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
+            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
+            &kp TAB        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
+            &kp ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                      &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
+            &kp GRAVE      &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
+            &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            >;
         };
 
         lower_layer {
