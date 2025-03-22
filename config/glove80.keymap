@@ -26,11 +26,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
-        rgb_ug_press: behavior_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_RED>, <&wait_ms 100>, <&rgb_ug RGB_CYAN>;
-        };
     };
 
     macros {
