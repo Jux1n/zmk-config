@@ -26,12 +26,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
-        layer_td: key_rgb_override {
-            compatible = "zmk,key-override";
-            match-key = <KC_A>;
-            replace-behavior = <&rgb_ug RGB_HSV 120 255 255>; // Green when pressed
-        };
-  };
+    };
 
     macros {
         bt_0: bt_profile_macro_0 {
