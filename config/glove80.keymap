@@ -26,13 +26,11 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
-    key_overrides {
         key_rgb_override {
             compatible = "zmk,key-override";
             match-key = <KC_A>;
             replace-behavior = <&rgb_ug RGB_HSV 120 255 255>; // Green when pressed
         };
-    };
   };
 
     macros {
