@@ -26,6 +26,25 @@
             tapping-term-ms = <200>;
             bindings = <&mo LOWER>, <&to LOWER>;
         };
+
+        key_rgb_press: key_rgb_press {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Key RGB Press";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            bindings = <&rgb_ug RGB_HSV 120 255 255>; // Change to green on press
+        };
+
+        key_rgb_release: key_rgb_release {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Key RGB Release";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            bindings = <&rgb_ug RGB_HSV 0 0 0>; // Reset color on release
+        };
+
     };
 
     macros {
