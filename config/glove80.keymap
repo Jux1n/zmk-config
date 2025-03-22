@@ -105,5 +105,10 @@
             &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
             >;
         };
+
+            // Default global RGB behavior
+        rgb {
+        default_color = RGB_CYAN;
+        };
     };
 };
