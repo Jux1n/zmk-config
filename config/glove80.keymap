@@ -66,6 +66,13 @@
         compatible = "zmk,keymap";
 
         default_layer {
+&mt MOD_LCTL KC_A     &rgb_ug_press RGB_RED
+&kp KC_B              &rgb_ug_press RGB_BLUE
+&kp KC_C              &rgb_ug_press RGB_GREEN
+&mt MOD_LCTL KC_A     &rgb_ug_press RGB_RED
+&kp KC_B              &rgb_ug_press RGB_BLUE
+&kp KC_C              &rgb_ug_press RGB_GREEN
+          
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
